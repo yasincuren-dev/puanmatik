@@ -1,0 +1,67 @@
+<ion-view view-title="Puanmatik">
+  <ion-content>
+
+  	<!---Bilgi Kartı--->
+  	<div class="card">
+  		<div class="item item-text-wrap balanced">
+    Lütfen sizden istenilen bilgileri aşağıdaki alanlara giriniz.
+  		</div>
+	</div>
+
+
+	<!-------------->
+	<div class="list">
+
+		<!----Mat---->
+	  <div class=" range range-positive">
+	    MAT
+	    <input type="range" ng-model="mat" min="0" max="40" ng-change="hesapla(mat,fen,tur,sos)">
+	    {{mat}} Net
+	  </div>
+
+
+		<!----Fen---->
+	  <div class=" range range-positive">
+	    FEN
+	    <input type="range" ng-model="fen" min="0" max="40" ng-change="hesapla(mat,fen,tur,sos)">
+	    {{fen}} Net
+	  </div>
+
+
+
+		<!----Türkçe---->
+	  <div class=" range range-positive">
+	    TÜR
+	    <input type="range" ng-model="tur" min="0" max="40" ng-change="hesapla(mat,fen,tur,sos)">
+	    {{tur}} Net
+	  </div>
+
+
+
+
+		<!----Sosyal---->
+	  <div class=" range range-positive">
+	    SOS
+	    <input type="range" ng-model="sos" min="0" max="40" ng-change="hesapla(mat,fen,tur,sos)">
+	    {{sos}} Net
+	  </div>
+
+
+	</div>
+
+
+	<!---Bilgi Kartı--->
+  	<div class="card">
+  		<div class="item item-text-wrap balanced">
+
+  			<h1 style="font-size: 40px;">YKS {{sonuc | number:2}} Puan</h1>
+  			<h3>{{(sonuc)>300 ? "Süpersin": ""}} </h3>
+
+  		</div>
+	</div>
+
+
+
+
+  </ion-content>
+</ion-view>
